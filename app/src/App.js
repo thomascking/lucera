@@ -7,6 +7,7 @@ import ChipInput from 'material-ui-chip-input';
 import { addSymbol, removeSymbol, updatePageSize, addProvider, removeProvider, fetchPage } from './store';
 
 import Table from './components/table';
+import Graph from './components/graph';
 import Pagination from './components/pagination';
 
 import './App.css';
@@ -31,7 +32,7 @@ const App = ({ symbols, pageSize, liquidityProviders, startTime, endTime, addSym
       </AppBar>
       <div>
         {
-          value === 0 ? <Table /> : 'Graph'
+          value === 0 ? <Table /> : <Graph />
         }
       </div>
     </div>

@@ -80,7 +80,19 @@ export const fetchPage = (page, pageSize, symbols, providers, startTime, endTime
         if (pageSize) {
             url = `${url}&pageSize=${pageSize}`;
         }
-        return fetch(url).then(response => response.json()).then(json => dispatch(fetchComplete(json)))
+        return fetch(url)
+            .then(response => response.json())
+            .then(json => {
+                dispatch(fetchComplete({
+                    ...json, 
+                    values: json.values.map(v => {
+                        return {
+                            ...v, 
+                            ts: new Date(v.ts)
+                        }
+                    })
+                }));
+            });
     }
 }
 

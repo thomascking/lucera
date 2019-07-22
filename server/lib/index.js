@@ -80,7 +80,7 @@ app.get('/api/data', function (req, res) {
     values: values
   });
 });
-app.use(_express["default"]["static"]('../app/build'));
+app.use('/', _express["default"]["static"]('../app/build'));
 app.listen(3000, function () {
   console.log('Started server');
 });

@@ -70,7 +70,7 @@ app.get('/api/data', (req, res) => {
     });
 });
 
-app.use(express.static('../app/build'));
+app.use('/', express.static('../app/build'));
 
 app.listen(3000, () => {
     console.log('Started server');

@@ -25,7 +25,7 @@ const DataTable = ({values}) => {
                         return (
                             <TableRow>
                                 <TableCell>{v.sym}</TableCell>
-                                <TableCell>{new Date(v.ts).toLocaleTimeString()}</TableCell>
+                                <TableCell>{v.ts.toLocaleTimeString()}</TableCell>
                                 <TableCell>{v.lp}</TableCell>
                                 <TableCell>{v.bid_price}</TableCell>
                                 <TableCell>{v.bid_quantity}</TableCell>
