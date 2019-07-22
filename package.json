@@ -1,0 +1,13 @@
+{
+  "name": "lucera",
+  "version": "1.0.0",
+  "description": "Project for lucera",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd app && npm run build && cd ../server && npm start",
+    "install": "cd app && npm install && cd ../server && npm install",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
